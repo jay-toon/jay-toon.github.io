@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'x';
+    src: url('../Love/assets/w.otf');
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 90px;
+    font-weight: 100;
+    text-align: center;
+    font-family: 'x';
+}
+
+button {
+    color: #ffffff;
+    background-color: #f399e7;
+    border-radius: 10px;
+    border: 5px ridge #ffffff;
+    width: 10%;
+    padding: 2%;
+    font-size: 60px;
+}
+
+#no{
+    right: 25%;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+
+button:hover {
+    background-color: #a875a8;
+}
+
+#yes{
+    position: absolute;
+    left: 35%;
+    transform: translate(-50%, 0);
+}
