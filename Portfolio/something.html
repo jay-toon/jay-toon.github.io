@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav-list">
+        <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="something.html" class="active">Forbidden</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="title">Jay Toon</h2>
+        <h2 class="subtitle">Web Developer and Software Engineer</h3>
+        <img src="assets/avatar.png" alt="avatar" class="profile-pic">
+        <h4 class="subtitle" style="width:45%; color:white; font-weight:200;margin-bottom:2.5%;">I create websites and user-interface applications that present purpose and utility to end users and clients.</h4>
+        <button class="contact-button">Contact Me</button>
+    </header>
+
+    <main>
+        
+    </main>
+
+
+    <p style="color: #fff">2024 Jay Toon &copy; ALL RIGHTS RESERVED</p>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.querySelector("header").style.top = "0";
+            } else {
+                document.querySelector("header").style.top = "-100px";
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    </script>
+
+    <script>
+        function redirectToPage() {
+            window.location.href = "#about-me";
+        }
+    </script>
+</body>
+</html>

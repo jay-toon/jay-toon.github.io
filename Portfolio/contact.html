@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav-list">
+        <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="something.html">Forbidden</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="title">Get in touch!</h1>
+        <h2 class="subtitle">Contact me through this form if you have interest in me as a developer, or have any questions regarding my abilities within website development.</h2>
+    </header>
+
+    <main>
+        <form>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Message" required disabled></textarea>
+            <button disabled>Send</button>
+        </form>
+
+        <script>
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            const form = document.querySelector('form');
+            form.addEventListener('input', function() {
+                if (nameInput.value && emailInput.value) {
+                    messageInput.disabled = false;
+                }
+            });
+        </script>
+
+        <script>
+            const button = document.querySelector('button');
+                messageInput.addEventListener('input', function() {
+                    if (messageInput.value) {
+                        button.disabled = false;
+                    }
+                });
+        </script>
+    </main>
+</body>
+</html>

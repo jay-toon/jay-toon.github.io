@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav-list">
+        <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="something.html">Forbidden</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="title">Contact Me</h1>
+        <h2 class="subtitle">Responses will arrive between 1-3 business days</h2>
+    </header>
+
+    <main>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button>Send</button>
+        </form>
+    </main>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.querySelector("header").style.top = "0";
+            } else {
+                document.querySelector("header").style.top = "-100px";
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    </script>
+
+    <script>
+        function redirectToPage() {
+            window.location.href = "#about-me";
+        }
+    </script>
+</body>
+</html>
