@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins',Arial,sans-serif;
+    scroll-behavior: smooth;
+    color: #cff6f5;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    transition-duration: 500ms;
+}
+
+a:hover{
+    color: #00ffb7;
+    transition-duration: 500ms;
+}
+
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0 !important;
+}
+
+.info h1 {
+    color: #00ffb7;
+}
+
+.info li {
+    padding-bottom: 5%;
+}
+
+.info ul {
+    
+    display: block;
+    padding: 5%;
+}
+
+p {
+    color: #8f9e9a;
+    font-weight: 500;
+}
+
+svg {
+    fill: #8f8f8f;
+    transition-duration: 500ms;
+}
+
+svg:hover {
+    fill: #00ffb7;
+    transition-duration: 500ms;
+}
+
+ul {
+    list-style: none;
+}
+
+.socials a {
+    margin-right: 10%;
+}
+
+.section {
+    margin-left: 50%; margin-top: 5%; width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section h1 {
+    font-size: 45px;
+}
+
+.experience {
+    padding-inline: 15%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition-duration: 500ms;
+}
+
+.experience:hover {
+    border: 1px solid rgba(255, 255, 255, 0.415);
+    background-color: #c4f4ff0b;
+    filter: blur(0px);
+    transition-duration: 500ms;
+}
+
+.inactive {
+    filter: blur(2px);
+}
+
+.experience:hover {
+    filter: none;
+}
+
+.experience ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;  
+}
+
+.experience li {
+    margin-right: 5%;
+    border: 2px solid #8aff88;
+    background-color: #02840063;
+    border-radius: 30px;
+    padding: 3%;
+}
