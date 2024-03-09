@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Report</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Jay Toon</h2>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    About
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </a>
+                <div class="dropdown-content">
+                    <a href="/index.html">About Me</a>
+                    <a href="/site-report.html">Site Report</a>
+                    <a href="/site-demo.html">Site Demo</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Projects
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </a>
+                <div class="dropdown-content">
+                    <a href="/gtengine.html">GTEngine</a>
+                    <a href="/python-database-integration.html">Python Database Integration</a>
+                    <a href="/claybrook-zoo.html">Claybrook Zoo</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="heading">Contact</h1>
+    </header>
+    <main style="justify-content: center; display: flex;">
+        <content class="container" style="width: 50%;">
+            <form id="contactForm" onsubmit="sendEmail();">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Preferred E-Mail" required>
+                <label for="message"></label>
+                <textarea id="message" name="message" placeholder="Message" style="height: 100px;"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p>Please note: This will open your mail application and fill in the contents for you.
+        </content>
+       </p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jay Toon</p>
+    </footer>
+</body>
+<script>
+    function sendEmail() {
+        // fetches by form ID's and their value
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        var mailtoLink = "mailto:jaytoon.dev@gmail.com" + // send to this email
+            "?subject=" + encodeURIComponent("Message from https://CSY1063.github.io/as1-jay-toon/contact.html") + // subject
+            "&body=" + encodeURIComponent("Name: " + name + "\n" + "Email: " + email + "\n" + "Message: " + message); // states name, submitted e-mail and message
+        window.location.href = mailtoLink;
+    }
+</script>
+</html>
+<!-- FINISHED AS OF 09/03/24 -->
